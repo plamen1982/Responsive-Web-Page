@@ -181,6 +181,10 @@ gulp.task('default', ['build']);
 //   });
 // });  you need this here so have to run from console 'gulp browser-sync' and then you can use the package
 
+// gulp.task('bs-reload', function () {
+//   browserSync.reload();
+// });
+
 // find the task for the sass compiler and paste it also here
 
 //you can modify gulp default task so it can run your added tasks
