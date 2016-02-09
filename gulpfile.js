@@ -170,3 +170,17 @@ gulp.task('build', function (done) {
 });
 
 gulp.task('default', ['build']);
+
+// var browserSync = require('browser-sync');
+
+// gulp.task('browser-sync', function() {
+//   browserSync({
+//     server: {
+//       baseDir: "./"
+//     }
+//   });
+// });  you need this here so have to run from console 'gulp browser-sync' and then you can use the package
+
+// find the task for the sass compiler and paste it also here
+
+//you can modify gulp default task so it can run your added tasks
