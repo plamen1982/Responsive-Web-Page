@@ -1,17 +1,7 @@
 var fs = require('fs');
 var path = require('path');
-var rename = require('gulp-rename');
+
 var gulp = require('gulp');
-var plumber = require('gulp-plumber');
-var autoprefixer = require('gulp-autoprefixer');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');
-var cache = require('gulp-cache');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync');
-
-
 
 // Load all gulp plugins automatically
 // and attach them to the `plugins` object
@@ -23,6 +13,8 @@ var runSequence = require('run-sequence');
 
 var pkg = require('./package.json');
 var dirs = pkg['h5bp-configs'].directories;
+
+var browserSync = require('browser-sync');
 
 // ---------------------------------------------------------------------
 // | Helper tasks                                                      |
@@ -175,55 +167,26 @@ gulp.task('archive', function (done) {
 gulp.task('build', function (done) {
     runSequence(
         ['clean', 'lint:js'],
-        'copy',
+        'copy', 'bs-reload',
     done);
 });
 
+// Adding just browser-sync task
 
-gulp.task('browser-sync', function(){
-    browserSync({
-        server: {
-            baseDir: "./"
-        }
-    });
+gulp.task('browser-sync', function() {
+  browserSync({
+    server: {
+      baseDir: "dist/"  //Changing baseDir so it corespond to the project
+    }
+  });
 });
 
-gulp.task('bs-reload', function(){
-    browserSync.reload();
+gulp.task('bs-reload', function () {
+  browserSync.reload();
 });
 
-gulp.task('styles', function(){
-    gulp.src(['src/css/**/*.scss'])
-        .pipe(plumber({
-            errorHandler: function (error) {
-                console.log(error.message);
-                this.emit('end');
-            }}))
-        .pipe(sass())
-        .pipe(autoprefixer('last 2 versions'))
-        .pipe(gulp.dest('dist/css/'))
-        .pipe(browserSync.reload({stream:true}));
+gulp.task('default', ['build', 'browser-sync'], function(){
+  gulp.watch("src/css/**/*.scss", ['build']);
+  gulp.watch("src/js/**/*.js", ['build']);
+  gulp.watch("src/*.html", ['build']);
 });
-
-gulp.task('scripts', function(){
-    return gulp.src('src/js/**/*.js')
-        .pipe(plumber({
-            errorHandler: function (error) {
-                console.log(error.message);
-                this.emit('end');
-            }}))
-        .pipe(concat('main.js'))
-        .pipe(gulp.dest('dist/js/'))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/js/'))
-        .pipe(browserSync.reload({stream:true}));
-});
-
-gulp.task('default', ['build', 'browser-sync', 'styles', 'scripts'], function(){
-    gulp.watch("src/css/**/*/.scss", ['styles']);
-    gulp.watch("src/js/**/*.js", ['scripts']);
-    gulp.watch("*.html", ['bs-reload']);
-});
-
-
