@@ -16,6 +16,9 @@ var dirs = pkg['h5bp-configs'].directories;
 
 var browserSync = require('browser-sync');
 
+var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var  plumber = require('gulp-plumber');
 // ---------------------------------------------------------------------
 // | Helper tasks                                                      |
 // ---------------------------------------------------------------------
@@ -167,7 +170,7 @@ gulp.task('archive', function (done) {
 gulp.task('build', function (done) {
     runSequence(
         ['clean', 'lint:js'],
-        'copy', 'bs-reload',
+        'copy', 'sass', 'bs-reload',
     done);
 });
 
@@ -176,13 +179,26 @@ gulp.task('build', function (done) {
 gulp.task('browser-sync', function() {
   browserSync({
     server: {
-      baseDir: "dist/"  //Changing baseDir so it corespond to the project
+      baseDir: "dist/"  //Changing baseDir so it correspond to the project
     }
   });
 });
 
 gulp.task('bs-reload', function () {
   browserSync.reload();
+});
+
+gulp.task('sass', function(){
+    gulp.src(['src/css/**/*.scss'])
+        .pipe(plumber({
+            errorHandler: function (error) {
+                console.log(error.message);
+                this.emit('end');
+            }}))
+        .pipe(sass())
+        .pipe(autoprefixer('last 2 versions'))
+        .pipe(gulp.dest('dist/css/'))
+        .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('default', ['build', 'browser-sync'], function(){
