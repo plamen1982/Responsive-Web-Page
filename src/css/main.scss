@@ -87,9 +87,20 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.lang {
+    color: #7d858a;
 
-
-
+    li:first-child {
+        margin-right: 15px;
+    }
+    li {
+        display: inline-block;
+        margin-right:30px;
+    }
+    li:nth-child(2) {
+       img {margin-left: 5px};
+    }
+}
 
 
 
