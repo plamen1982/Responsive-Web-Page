@@ -24,167 +24,201 @@
 
         <!-- Add your site or application content here -->
         <header>
-          <div class="container">
-              <div class="row visible-md visible-lg">
-                  <div class="col-md-12">
-                      <ul class="lang">
-                           <li>Deutsch</li>
-                           <li>Select Language <img src="img/resources/globe_icn@2x.png"></li>
-                           <li>Merkzettel(0)</li>
-                           <li>Kontakt</li>
-                      </ul>
-                      <!-- make this menu as bootstrap https://getbootstrap.com/components/#navbar -->
+          <section>
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <ul class="nav navbar-nav">
+                               <li><a href="#">Deutsch</a></li>
+                               <li><a href="#">Select Language<img src="img/resources/globe_icn@2x.png"></a></li>
+                               <li><a href="#">Merkzettel(0)</a></li>
+                               <li><a href="#">Kontakt</a></li>
+                          </ul>
+                          <!-- make this menu as bootstrap https://getbootstrap.com/components/#navbar -OK -->
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-12">
+                          <img src="img/resources/logo_plastic.png" alt="logo">
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-12 ">
+                          <nav class="navbar navbar-default">
+                              <div class="container-fluid">
+                                  <div class="navbar-header">
+                                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse"
+                                              aria-expanded="false">
+                                          <span class="sr-only">Toggle navigation</span>
+                                          <span class="icon-bar"></span>
+                                          <span class="icon-bar"></span>
+                                          <span class="icon-bar"></span>
+                                      </button>
+                                      <a class="navbar-brand visible-sm visible-xs" href="#">Navigation</a>
+                                  </div>
+                                  <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+                                      <ul class="nav navbar-nav">
+                                          <li><a href="#">Unternehmen</a></li>
+                                          <li><a href="#">Dienstleistungen</a></li>
+                                          <li><a href="#">Mark udn Technik</a></li>
+                                          <li><a href="#">Produkte</a></li>
+                                          <li><img src="img/resources/search_icn@2x.png"></li>
+                                          <!-- make this menu as bootstrap and dont forget anchor tags https://getbootstrap.com/components/#navbar -OK -->
+                                      </ul>
+                                  </div>
+                              </div>
+                          </nav>
+                      </div>
                   </div>
               </div>
-              <div class="row">
-                  <div class="col-md-12">
-                      <img src="img/resources/logo_plastic.png" alt="logo">
-                  </div>
-              </div>
-              <div class="row visible-md visible-lg">
-                  <div class="col-md-12 ">
-                      <ul>
-                          <li>Unternehmen</li>
-                          <li>Dienstleistungen</li>
-                          <li>Mark udn Technik</li>
-                          <li>Produkte</li>
-                          <li><img src="img/resources/search_icn@2x.png"></li>
-                          <!-- make this menu as bootstrap and dont forget anchor tags https://getbootstrap.com/components/#navbar -->
-                      </ul>
-                  </div>
-              </div>
-          </div>
+          </section>
         </header>
         <main>
-          <!-- include section and article tags into the page -->
+          <!-- include section and article tags into the page -OK -->
           <!-- make all images proper size -->
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-12">
-                      <h1>Produktgruppen</h1>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, eveniet optio soluta laudantium recusandae molestias eaque magni, at officiis ea aut fuga, ipsam nam ullam perferendis dicta fugit rem tempora.
-                  </div>
-              </div>
-              <hr/>
-              <div class="row">
-                  <div class="col-md-4">
-                      <img src="img/resources/Product1@2x.png" alt="product1">
-                  </div>
-                  <div class="col-md-8">
-                      <h1>PE-KANALISATIONSROHR-SYSTEM MIT STECKMUFFE</h1>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, eveniet optio soluta laudantium recusandae molestias eaque magni, at officiis ea aut fuga, ipsam nam ullam perferendis dicta fugit rem tempora.
-                      <br/>
-                      <!-- it is not good practise to use br tags. Just follow the flow of the elements -->
+            <section>
+              <div class="container">
+                  <article>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <h1>Produktgruppen</h1>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, eveniet optio soluta laudantium recusandae molestias eaque magni, at officiis ea aut fuga, ipsam nam ullam perferendis dicta fugit rem tempora.
+                              </p>
+                          </div>
+                      </div>
+                  </article>
+                  <article>
+                      <div class="row">
+                          <div class="col-md-4">
+                               <img src="img/resources/Product1@2x.png" alt="product1">
+                          </div>
+                          <div class="col-md-8">
 
-                      <img src="img/resources/arrow_right@2x.png">
-                      <!-- make this image proper size and position it absolute -->
-                      <!-- image position is bottom: 0 right: 0 -->
-                  </div>
-                  <!-- move arrow image here -->
-                  <!-- row element should be with relative position for arrow image -->
-                  <!-- these comments are the same for bottom elements -->
+                             <h1>PE-KANALISATIONSROHR-SYSTEM MIT STECKMUFFE</h1>
+                             <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, eveniet optio soluta laudantium recusandae molestias eaque magni, at officiis ea aut fuga, ipsam nam ullam perferendis dicta fugit rem tempora
+                             </p>
+
+                                  <!-- it is not good practise to use br tags. Just follow the flow of the elements  -->
+                                  <!-- make this image proper size and position it absolute -->
+                                  <!-- image position is bottom: 0 right: 0 - OK ,but bottom: 10px-->
+                          </div>
+                          <img class="custom-arrow" src="img/resources/arrow_right@2x.png">
+                          <!-- move arrow image here -OK -->
+                          <!-- row element should be with relative position for arrow image -OK -->
+                          <!-- these comments are the same for bottom elements -OK -->
+                      </div>
+                  </article>
+                  <article>
+                      <div class="row">
+                          <div class="col-md-4">
+                              <img src="img/resources/Product2@2x.png" alt="product1">
+                          </div>
+                          <div class="col-md-8">
+                              <h1>PE-KANALISATIONSROHR-SYSTEM MIT STECKMUFFE</h1>
+                              <p>
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, eveniet optio soluta laudantium recusandae molestias eaque magni, at officiis ea aut fuga, ipsam nam ullam perferendis dicta fugit rem tempora
+                              </p>
+                          </div>
+                          <img class="custom-arrow" src="img/resources/arrow_right@2x.png">
+                      </div>
+                  </article>
+                  <article>
+                      <div class="row">
+                          <div class="col-md-4">
+                              <img src="img/resources/Product1@2x.png" alt="product1">
+                          </div>
+                          <div class="col-md-8">
+                              <h1>PE-KANALISATIONSROHR-SYSTEM MIT STECKMUFFE</h1>
+                              <p>
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, eveniet optio soluta laudantium recusandae molestias eaque magni, at officiis ea aut fuga, ipsam nam ullam perferendis dicta fugit rem tempora
+                              </p>
+                          </div>
+                          <img class="custom-arrow" src="img/resources/arrow_right@2x.png">
+                      </div>
+                  </article>
+                  <article>
+                      <div class="row">
+                          <div class="col-md-4">
+                              <img src="img/resources/Product2@2x.png" alt="product1">
+                          </div>
+                          <div class="col-md-8">
+                              <h1>PE-KANALISATIONSROHR-SYSTEM MIT STECKMUFFE</h1>
+                              <p>
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, eveniet optio soluta laudantium recusandae molestias eaque magni, at officiis ea aut fuga, ipsam nam ullam perferendis dicta fugit rem tempora
+                              </p>
+                          </div>
+                          <img class="custom-arrow" src="img/resources/arrow_right@2x.png">
+                      </div>
+                  </article>
               </div>
-              <hr/>
-              <div class="row">
-                  <div class="col-md-4">
-                      <img src="img/resources/Product2@2x.png" alt="product2">
-                  </div>
-                  <div class="col-md-8">
-                      <h1>PE-KANALISATIONSROHR-SYSTEM MIT STECKMUFFE</h1>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, eveniet optio soluta laudantium recusandae molestias eaque magni, at officiis ea aut fuga, ipsam nam ullam perferendis dicta fugit rem tempora.
-                      <br/>
-                      <img src="img/resources/arrow_right@2x.png">
-                  </div>
-              </div>
-              <hr/>
-              <div class="row">
-                  <div class="col-md-4">
-                      <img src="img/resources/Product1@2x.png" alt="product1">
-                  </div>
-                  <div class="col-md-8">
-                      <h1>PE-KANALISATIONSROHR-SYSTEM MIT STECKMUFFE</h1>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, eveniet optio soluta laudantium recusandae molestias eaque magni, at officiis ea aut fuga, ipsam nam ullam perferendis dicta fugit rem tempora.
-                      <br/>
-                      <img src="img/resources/arrow_right@2x.png">
-                  </div>
-              </div>
-              <hr/>
-              <div class="row">
-                  <div class="col-md-4">
-                      <img src="img/resources/Product2@2x.png" alt="product2">
-                  </div>
-                  <div class="col-md-8">
-                      <h1>PE-KANALISATIONSROHR-SYSTEM MIT STECKMUFFE</h1>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, eveniet optio soluta laudantium recusandae molestias eaque magni, at officiis ea aut fuga, ipsam nam ullam perferendis dicta fugit rem tempora.
-                      <br/>
-                      <img src="img/resources/arrow_right@2x.png">
-                  </div>
-              </div>
-              <hr/>
-          </div>
+            </section>
         </main>
         <footer>
-            <div class="container">
-                <div class="row visible-md visible-lg">
-                    <div class="col-md-3">
-                        <ul>
-                            <li>DIENSTLEISTUNGEN</li>
-                            <li>Extrusion</li>
-                            <li>Spritzgus</li>
-                            <li>Logistik</li>
-                            <li>Logistik</li>
-                            <li>Spezialanfertgungen</li>
-                            <!-- dont forget anchor tags -->
-                        </ul>
+            <section>
+                <div class="container">
+                    <div class="row visible-md visible-lg">
+                        <div class="col-md-3">
+                            <ul>
+                                <li><a href="#">DIENSTLEISTUNGEN</a></li>
+                                <li><a href="#">Extrusion</a></li>
+                                <li><a href="#">Spritzgus</a></li>
+                                <li><a href="#">Logistik</a></li>
+                                <li><a href="#">Logistik</a></li>
+                                <li><a href="#">Spezialanfertgungen</a></li>
+                                <!-- dont forget anchor tags - OK -->
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul>
+                                <li><a href="#">>MARK UND TECHNIK</a></li>
+                                <li><a href="#">Referenzen</a></li>
+                                <li><a href="#">Volumen</a></li>
+                                <li><a href="#">Partner</a></li>
+                                <li><a href="#">Publikationen</a></li>
+                                <li><a href="#">Zulassung</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul>
+                                <li><a href="#">UNTERNHENMEN</a></li>
+                                <li><a href="#">Grundsatze</a></li>
+                                <li><a href="#">Geschichte</a></li>
+                                <li><a href="#">Standorte</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <ul>
+                                <li><a href="#">KONTAKT</a></li>
+                                <li><a href="#"><img src="img/resources/user_icn@2x.png">Kontaktinformationen</a></li>
+                                <li><a href="#"><img src="img/resources/mail_icn@2x.png">Zum Kontak</a></li>
+                                <li>
+                                    <a href=""><img src="img/resources/facebook_icn@2x.png"></a>
+                                    <a href=""><img src="img/resources/youtube_icn@2x.png"></a>
+                                    <a href=""><img src="img/resources/linkedin_icn@2x.png"></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <ul>
-                            <li>MARK UND TECHNIK</li>
-                            <li>Referenzen</li>
-                            <li>Volumen</li>
-                            <li>Partner</li>
-                            <li>Publikationen</li>
-                            <li>Zulassung</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <ul>
-                            <li>UNTERNHENMEN</li>
-                            <li>Grundsatze</li>
-                            <li>Geschichte</li>
-                            <li>Standorte</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <ul>
-                            <li>KONTAKT</li>
-                            <li><img src="img/resources/user_icn@2x.png">Kontaktinformationen</li>
-                            <li><img src="img/resources/mail_icn@2x.png">Zum Kontak</li>
-                            <li>
-                                <img src="img/resources/facebook_icn@2x.png">
-                                <img src="img/resources/youtube_icn@2x.png">
-                                <img src="img/resources/linkedin_icn@2x.png">
-                            </li>
-                        </ul>
+                    <div class="row">
+                        <div class="col-md-3">
+                          <!-- for this menu use bootsrap nav same as the top menu -->
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">Deutsch</a></li>
+                                <li><a href="#">Select Language <img src="img/resources/globe_icn@2x.png"></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-md-offset-6">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">AGB</a></li>
+                                <li><a href="#">Impressum</a></li>
+                                <li><a href="#">System 4</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-3">
-                      <!-- for this menu use bootsrap nav same as the top menu -->
-                        <ul>
-                            <li>Deutsch</li>
-                            <li>Select Language <img src="img/resources/globe_icn@2x.png"></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 col-md-offset-6">
-                        <ul>
-                            <li>AGB</li>
-                            <li>Impressum</li>
-                            <li>System 4</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            </section>
         </footer>
 
         <script src="js/vendor/jquery-1.12.0.min.js"></script>

@@ -102,7 +102,19 @@ textarea {
     }
 }
 
+.custom-arrow{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
 
+article {
+    .row {
+        position: relative;
+        border-bottom: 1px solid #7d858a;
+    }
+
+}
 
 
 
