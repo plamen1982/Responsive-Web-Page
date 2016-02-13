@@ -16,7 +16,7 @@ html {
 
 /*
  * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
+ * https://twitter.com/miketaylr/status/12228805301-
  *
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
@@ -87,38 +87,131 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-.lang {
-    color: #7d858a;
+/*Small navigation on the top-left*/
 
-    li:first-child {
-        margin-right: 15px;
-    }
-    li {
-        display: inline-block;
-        margin-right:30px;
-    }
-    li:nth-child(2) {
-       img {margin-left: 5px};
+#lang-nav{
+    >ul {
+        li{
+            a{
+                color: grey;
+                font-size: 10px;
+                img{
+                    heigth: 20%;
+                    padding-left: 10px;
+                    width: 20%;
+                }
+            }
+            a:hover{
+                background-color: white;
+                color: grey;
+            }
+
+        }
+        li:nth-of-type(n+1){
+            margin-right: -15px;
+        }
     }
 }
 
+header {
+    .row {
+        position: relative;
+        #logo-big{
+            padding-bottom: 50px;
+        }
+    }
+}
+
+header {
+    .navbar-default {
+        border-color: transparent;
+        a{
+            border-radius: 0px;
+            border-left: 1px solid #ced1d6;
+            color: black;
+            font-size: 1.4em;
+        }
+        a:hover {
+            color: white;
+            border-radius: 0px;
+            border-left-width:0px;
+            background-color: #a82539;
+        }
+    }
+}
+article {
+    .row {
+        border-bottom: 1px solid #ced1d6;
+        position: relative;
+    }
+}
+
+/*custom-arrow class is absolute to article row{position:relative}*/
+
 .custom-arrow{
-    position: absolute;
     bottom: 10px;
+    position: absolute;
     right: 0;
 }
 
-article {
-    .row {
-        position: relative;
-        border-bottom: 1px solid #7d858a;
+.nav-pills{
+    li {
+        img{
+            height: 50%;
+            width: 50%;
+            padding-top: 12px;
+        }
     }
-
 }
 
+main{
+    .col-md-4{
+        img{
+            height: 65%;
+            width: 65%;
+        }
+    }
+}
 
-
-
+footer{
+    li{
+        display: block;
+        margin-bottom: 15px;
+        a{
+            color: grey;
+        }
+        a:hover{
+            text-decoration:none ;
+        }
+    }
+    ul.navbar-nav{
+        li{
+            a:hover{
+                background-color:transparent;
+            }
+            a {
+                img{
+                    width: 15%;
+                }
+            }
+        }
+    }
+    ul{
+        li{
+            img{
+                width: 10%;
+            }
+        }
+    }
+    section{
+        margin-top: 60px;
+        .container {
+            .row:first-child{
+                margin-bottom: 60px;
+            }
+        }
+    }
+}
 
 
 
@@ -198,6 +291,16 @@ article {
 
 .clearfix:after {
     clear: both;
+}
+
+/*Red color of the text*/
+.red {
+    color:red;
+}
+
+.proper-size-img{
+    width: 65%;
+    height: 65%;
 }
 
 /* ==========================================================================
