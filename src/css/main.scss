@@ -124,18 +124,24 @@ header {
 
 header {
     .navbar-default {
+      //dont use bootstrap classes in your custom scss files add your class and select the element from there
         border-color: transparent;
         a{
             border-radius: 0px;
             border-left: 1px solid #ced1d6;
             color: black;
             font-size: 1.4em;
+            //find a way to remove left border to the first element
+            //see first-child selector for the li
+            //also remove left padding from the menu
         }
         a:hover {
             color: white;
             border-radius: 0px;
             border-left-width:0px;
             background-color: #a82539;
+            //make a hover efects on the li not on the a
+            //use li:hover a
         }
     }
 }
@@ -397,5 +403,3 @@ footer{
         page-break-after: avoid;
     }
 }
-
-
