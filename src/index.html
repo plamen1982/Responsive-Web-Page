@@ -27,7 +27,7 @@
           <section>
               <div class="container">
                   <div class="row">
-                      <div class="col-md-12" id="lang-nav">
+                      <div class="col-md-6" id="lang-nav">
                           <ul class="nav navbar-nav visible-md visible-lg">
                                <li><a href="#">Deutsch</a></li>
                                <li><a href="#">Select Language<img src="img/resources/globe_icn@2x.png"></a></li>
@@ -35,43 +35,47 @@
                                <li><a href="#">Kontakt</a></li>
                           </ul>
                       </div>
-                      <!-- make this col smaller and insert col from the bottom with the image here -->
                   </div>
                   <div class="row">
-                      <div class="col-md-6 col-md-offset-9">
+                      <div class="col-md-3 col-md-offset-9">
                           <img src="img/resources/logo_plastic.png" alt="logo" id="logo-big">
                           <!-- make this img with 100% -->
                       </div>
                       <!-- move this colum in the row above you dont need two rows here -->
                   </div>
                   <div class="row">
-                      <div class="col-md-12 "> <!-- remove this col-md-12 -->
-                          <nav class="navbar navbar-default">
-                              <div class="container-fluid">
-                                  <div class="navbar-header">
-                                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse"
-                                              aria-expanded="false">
-                                          <span class="sr-only">Toggle navigation</span>
-                                          <span class="icon-bar"></span>
-                                          <span class="icon-bar"></span>
-                                          <span class="icon-bar"></span>
-                                      </button>
-                                      <a class="navbar-brand visible-sm visible-xs" href="#">Navigation</a>
-                                  </div>
-                                  <div class="collapse navbar-collapse" id="bs-navbar-collapse">
-                                      <ul class="nav nav-pills"> <!-- change nav-pills to navbar-nav -->
-                                          <li><a href="#">Unternehmen</a></li>
-                                          <li><a href="#">Dienstleistungen</a></li>
-                                          <li><a href="#">Mark udn Technik</a></li>
-                                          <!--TODO Hover-menu-->
-                                          <li><a href="#">Produkte</a></li>
-                                          <li><img src="img/resources/search_icn@2x.png"></li>
-                                          <!-- make this image smaller -->
-                                      </ul>
-                                  </div>
+                      <nav class="navbar navbar-default border-col-transp">
+                          <div class="container-fluid reset-pad-left">
+                              <div class="navbar-header">
+                                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse"
+                                          aria-expanded="false">
+                                      <span class="sr-only">Toggle navigation</span>
+                                      <span class="icon-bar"></span>
+                                      <span class="icon-bar"></span>
+                                      <span class="icon-bar"></span>
+                                  </button>
+                                  <a class="navbar-brand visible-sm visible-xs" href="#">Navigation</a>
                               </div>
-                          </nav>
-                      </div>
+                              <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+                                  <ul class="nav navbar-nav main-menu"> <!-- change nav-pills to navbar-nav -->
+                                      <li><a href="#">Unternehmen</a></li>
+                                      <li><a href="#">Dienstleistungen</a></li>
+                                      <li><a href="#">Mark udn Technik</a></li>
+                                      <!--TODO Hover-menu-->
+                                      <li>
+                                          <a  href="#">Produkte</a>
+                                          <ul class="dropdown-custom" id="dropdown">
+                                              <li><a href="#">Produkte1</a></li>
+                                              <li><a href="#">Produkte2</a></li>
+                                              <li><a href="#">Produkte3</a></li>
+                                          </ul>
+                                      </li>
+                                      <!-- make this image smaller -->
+                                  </ul>
+                                  <span><img src="img/resources/search_icn.png"></span>
+                              </div>
+                          </div>
+                      </nav>
                   </div>
               </div>
           </section>
@@ -168,7 +172,7 @@
                         </div>
                         <div class="col-md-3">
                             <ul>
-                                <li><a href="#">>MARK UND TECHNIK</a></li>
+                                <li><a href="#">MARK UND TECHNIK</a></li>
                                 <li><a href="#">Referenzen</a></li>
                                 <li><a href="#">Volumen</a></li>
                                 <li><a href="#">Partner</a></li>
@@ -187,8 +191,8 @@
                         <div class="col-md-3">
                             <ul>
                                 <li><a href="#">KONTAKT</a></li>
-                                <li><a href="#"><img src="img/resources/user_icn@2x.png">Kontaktinformationen</a></li>
-                                <li><a href="#"><img src="img/resources/mail_icn@2x.png">Zum Kontak</a></li>
+                                <li><a href="#"><img src="img/resources/user_icn@2x.png"><span>Kontaktinformationen</span></a></li>
+                                <li><a href="#"><img src="img/resources/mail_icn@2x.png"><span>Zum Kontak</span></a></li>
                                 <li>
                                     <a href=""><img src="img/resources/facebook_icn@2x.png"></a>
                                     <a href=""><img src="img/resources/youtube_icn@2x.png"></a>
@@ -198,18 +202,15 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-3"> <!-- remove this col-md-3 -->
-                            <ul class="nav navbar-nav">
-                                <li><a href="#">Deutsch</a></li>
-                                <li><a href="#">Select Language <img src="img/resources/globe_icn@2x.png"></a></li>
-                            </ul>
-                        <div class="col-md-3 col-md-offset-6"> <!-- remove this col-md-3 -->
-                            <ul class="nav navbar-nav"> <!-- add class to this ul navbar-right -->
-                                <li><a href="#">AGB</a></li>
-                                <li><a href="#">Impressum</a></li>
-                                <li><a href="#">System 4</a></li>
-                            </ul>
-                        </div>
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Deutsch</a></li>
+                            <li><a href="#">Select Language <img src="img/resources/globe_icn@2x.png"></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right"> <!-- add class to this ul navbar-right - OK -->
+                            <li><a href="#">AGB</a></li>
+                            <li><a href="#">Impressum</a></li>
+                            <li><a href="#">System 4</a></li>
+                        </ul>
                     </div>
                 </div>
             </section>

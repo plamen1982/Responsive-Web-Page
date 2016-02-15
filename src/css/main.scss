@@ -105,7 +105,6 @@ textarea {
                 background-color: white;
                 color: grey;
             }
-
         }
         li:nth-of-type(n+1){
             margin-right: -15px;
@@ -117,55 +116,83 @@ header {
     .row {
         position: relative;
         #logo-big{
-            padding-bottom: 50px;
+            margin-bottom: 50px;
         }
     }
 }
 
 header {
-    .navbar-default {
+    .main-menu {
       //dont use bootstrap classes in your custom scss files add your class and select the element from there
-        border-color: transparent;
-        a{
+    >li{
+        position: relative;
+        ul#dropdown{
+            display: none;
+            list-style: none;
+        }
+        >a{
             border-radius: 0px;
             border-left: 1px solid #ced1d6;
             color: black;
             font-size: 1.4em;
+
             //find a way to remove left border to the first element
             //see first-child selector for the li
             //also remove left padding from the menu
         }
-        a:hover {
-            color: white;
-            border-radius: 0px;
-            border-left-width:0px;
+    }
+        >li:hover{
             background-color: #a82539;
-            //make a hover efects on the li not on the a
-            //use li:hover a
+            ul#dropdown{
+                background-color:#a82539;
+                display: block;
+                position:absolute;
+                padding-right:5px;
+                z-index: 999;
+            li{
+                display: block;
+                a{
+                    color: grey;
+                    display: block;
+                    padding-bottom: 10px;
+                }
+            }
+            li:hover{
+                    display: block;
+                    a:hover{
+                        color: white;
+                        display:block;
+                    }
+                }
+            }
+            a:hover {
+                border-radius: 0px;
+                border-left-width:1px;
+                color: white;
+                display: block;
+                text-decoration:none;
+                //make a hover efects on the li not on the a
+                //use li:hover a
+            }
         }
     }
 }
-article {
-    .row {
-        border-bottom: 1px solid #ced1d6;
-        position: relative;
+/*Custom dropdown*/
+
+
+/*Fix the padding of the search*/
+.navbar-collapse{
+    img{
+        padding-top:12px;
+        padding-left:12px;
     }
 }
 
-/*custom-arrow class is absolute to article row{position:relative}*/
-
-.custom-arrow{
-    bottom: 10px;
-    position: absolute;
-    right: 0;
-}
-
-.nav-pills{
+.navbar-nav{
     li {
         img{
             height: 50%;
             width: 50%;
-            padding-top: 12px;
         }
     }
 }
@@ -176,6 +203,13 @@ main{
             height: 65%;
             width: 65%;
         }
+    }
+}
+
+article {
+    .row {
+        border-bottom: 1px solid #ced1d6;
+        position: relative;
     }
 }
 
@@ -190,6 +224,11 @@ footer{
             text-decoration:none ;
         }
     }
+    .col-md-3{
+        img{
+            margin-right:10px;
+        }
+    }
     ul.navbar-nav{
         li{
             a:hover{
@@ -197,7 +236,11 @@ footer{
             }
             a {
                 img{
-                    width: 15%;
+                    width: 20%;
+
+                }
+                span{
+                    padding-left: 10px;
                 }
             }
         }
@@ -235,6 +278,26 @@ footer{
 
 .hidden {
     display: none !important;
+}
+
+/*Reset to 0 padding-left*/
+
+.reset-pad-left{
+    padding-left: 0;
+}
+/*Border-color to transparent*/
+.border-col-transp{
+    border-color: transparent;
+}
+
+
+/*custom-arrow class is absolute to article row{position:relative}*/
+
+.custom-arrow{
+    bottom: 10px;
+    position: absolute;
+    right: 0;
+    width: 1.5%;
 }
 
 /*
