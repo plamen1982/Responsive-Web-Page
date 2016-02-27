@@ -126,60 +126,66 @@ header {
 
 header {
     .main-menu {
-
+        position: absolute;
       //dont use bootstrap classes in your custom scss files add your class and select the element from there
-    >li{
-        position: relative;
-        ul#dropdown{
-            display: none;
-            list-style: none;
-        }
-        >a{
+        >li{
             border-radius: 0px;
             border-left: 1px solid #ced1d6;
-            color: black;
-            font-size: 1.4em;
+            position: relative;
+            ul#dropdown{
+                display: none;
+                list-style: none;
+            }
+            >a{
 
-            //find a way to remove left border to the first element
-            //see first-child selector for the li
-            //also remove left padding from the menu
+                color: black;
+                font-size: 1.4em;
+                padding-bottom: 0;
+
+                //find a way to remove left border to the first element
+                //see first-child selector for the li
+                //also remove left padding from the menu
+            }
         }
-    }
         >li:hover{
             background-color: $custom-red;
-            ul#dropdown{
-                background-color:$custom-red;
-                display: block;
-                position:absolute;
-                padding-right:20px;
-                z-index: 999;
-            li{
-                display: block;
-                a{
-                    color: grey;
+             a {
+                 padding-bottom: 15px;
+             }
+                ul#dropdown{
+                    background-color:$custom-red;
                     display: block;
-                    margin-left:-15px;
-                    padding-bottom: 10px;
-                }
-            }
-            li:hover{
+                    position:absolute;
+                    padding-right:9px;
+                    z-index: 999;
+                li{
                     display: block;
-                    a:hover{
-                        color: white;
-                        display:block;
+                    a{
+                        color: grey;
+                        display: block;
+                        font-size:1.3em;
+                        margin-left:-24px;
+                        padding-bottom: 10px;
                     }
                 }
+                li:hover{
+                        display: block;
+                        a:hover{
+                            color: white;
+                            display:block;
+                        }
+                    }
+                }
+                a:hover {
+                    border-radius: 0px;
+                    border-left-width:1px;
+                    color: white;
+                    display: block;
+                    text-decoration:none;
+                    //make a hover efects on the li not on the a
+                    //use li:hover a
+                }
             }
-            a:hover {
-                border-radius: 0px;
-                border-left-width:1px;
-                color: white;
-                display: block;
-                text-decoration:none;
-                //make a hover efects on the li not on the a
-                //use li:hover a
-            }
-        }
     }
 }
 /*Custom dropdown*/
@@ -497,13 +503,24 @@ $screen-sm-min:768px;
       }
   }
     }
-    .main-menu li:hover #dropdown {
-        display: block;
-        width: 100%;
-        li{
-            padding-top: 5px;
+header{
+    section{
+        .main-menu {
+            position:relative;
+            li:hover{
+                ul#dropdown {
+                    display: block;
+                    width: 100%;
+                    position: relative;
+                    li {
+                        padding-top: 5px;
+                        display: block;
+                    }
+                }
+            }
         }
     }
+}
     .navbar-header {
         background-color: $custom-red;
         .navbar-brand{
